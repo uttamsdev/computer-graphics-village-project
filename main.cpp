@@ -141,10 +141,10 @@ void sun()
 void road()
 
 {
-    setcolor(DARKGRAY);
+    setcolor(CYAN);
     rectangle(0,380, 645,480);
-    setfillstyle(SOLID_FILL,DARKGRAY );
-    floodfill(1,381, DARKGRAY);
+    setfillstyle(LINE_FILL,CYAN );
+    floodfill(1,381, CYAN);
 
 }
 void car()
@@ -222,23 +222,23 @@ int drawHouse()
     fillpoly(5, points);
 
     setcolor(LIGHTRED);
-    rectangle(120,280, 280,380);
+    rectangle(120,280, 280,370);
     setfillstyle(SOLID_FILL,LIGHTRED);
     floodfill(121,281, LIGHTRED);
 
-    setcolor(BROWN);
-    rectangle(180,320, 220,380);
-    setfillstyle(SOLID_FILL,BROWN);
-    floodfill(181,321, BROWN);
+    setcolor(MAGENTA);
+    rectangle(185,320, 215,370);
+    setfillstyle(SOLID_FILL,MAGENTA);
+    floodfill(186,321, MAGENTA);
 
-    setcolor(BROWN);
+    setcolor(BLUE);
     rectangle(140,300, 170,330);
-    setfillstyle(SOLID_FILL,BROWN);
-    floodfill(141,301, BROWN);
-    setcolor(BROWN);
+    setfillstyle(SOLID_FILL,BLUE);
+    floodfill(141,301, BLUE);
+    setcolor(BLUE);
     rectangle(230,300, 260,330);
-    setfillstyle(SOLID_FILL,BROWN);
-    floodfill(231,301, BROWN);
+    setfillstyle(SOLID_FILL,BLUE);
+    floodfill(231,301, BLUE);
 
 
 }
@@ -304,6 +304,21 @@ int school()
     setcolor(5);
     outtextxy(370,170,"School");
 
+    //flag
+    setcolor(WHITE);
+    rectangle(270,170, 315,210);
+    setfillstyle(SOLID_FILL,GREEN);
+    floodfill(271,171, GREEN);
+    setcolor(LIGHTGRAY);
+    rectangle(315,170, 320,300);
+    setfillstyle(SOLID_FILL, LIGHTGRAY);
+    floodfill(316,171, LIGHTGRAY);
+
+    setcolor(RED);
+    circle(292,190, 10);
+    setfillstyle(SOLID_FILL,RED);
+    floodfill(293,191, RED);
+
 }
 
 int main()
@@ -319,7 +334,6 @@ int main()
     rectangle(0,150, 645,380);
     setfillstyle(SOLID_FILL, GREEN);
     floodfill(1,151, GREEN);
-    //school();
     road();
     car();
     drawHouse();
